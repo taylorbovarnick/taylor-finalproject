@@ -4,11 +4,10 @@
 <article class="container">
   <div class="row">
     <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
+      <img class="img-fluid" src="assets/img/members/{{member.image}}" alt="Freddie color image">
     </div>
     <div class="col-sm-8">
-      {% block story %}{% endblock %}
-
+      {{members.name}}
     </div>
   </div>
 </article>

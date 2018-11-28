@@ -26,6 +26,19 @@
         {% else %}
           <li>This would display if the 'members' collection were empty</li>
         {% endfor %}
+        {% for disc in discography %}
+          <ul class="list-unstyled">
+            <li class="media">
+              <img class="mr-3" src="assets/img/discs/{{disc.image}}" alt="Generic placeholder image">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">{{ disc.title}}</h5>
+                {{disc.year}}
+              </div>
+            </li>
+          </ul>
+        {% else %}
+          <li>This would display if the 'members' collection were empty</li>
+        {% endfor %}
     </div>
   </div>
 </div>
