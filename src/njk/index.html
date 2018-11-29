@@ -7,37 +7,42 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    <h1>Queen</h1>
+    <h1 class="title">About The Band</h1>
     </div>
   </div>
   <div class="row">
     <div class="col">
-    <p>
-      Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals), and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock, into their music. - <a href=https://en.wikipedia.org/wiki/Queen_(band)> Wikipedia </a>
-    </p>
+      <p>Queen formed in 1971 and in 1973 signed their first recording contract for EMI. That year they released their first album, Queen. The same year saw their first major UK tour, and in 1974 they released Queen II as well as making their first UK headlining tour. They made their first US tour, and in November released Sheer Heart Attack which was a hit on both sides of the Atlantic.</p>
+
+      <p>1975 saw their new release, A Night At The Opera, and – significantly – the single Bohemian Rhapsody. At 5’ 55” it should have been too long for successful radio play but it became one of the greatest singles of all time, staying at No. 1 in the UK chart for nine weeks. The video, directed by Bruce Gowers, is credited with being the first genuine promotional video. The song has regularly featured in all major pop polls and was recently named again as the best single of all time. The success of A Night At The Opera was equally stunning, giving the band their first platinum album.</p>
+
+      <p>In 1976 they toured the US and Japan and by spring all four albums resided in the UK Top Twenty. Later that year they released A Day At The Races, and gave a free concert in Hyde Park to an estimated crowd of 200,000 fans. The album was a huge success, advance orders alone amounting to over 500,000. The following year saw two major US tours, the band’s sixth album, News Of The World and the legendary double A side single, We Will Rock You and We Are The Champions.  - <a href=http://www.queenonline.com/queen> Queen Official Website </a></p>
+
+      <h1 class="title">Meet The Members</h1>
+      <div class="row">
         {% for member in members %}
-        <div class="card" style="width: 18rem;">
+        <div class="col-md-3">  
+        <div class="card" style="width: 14rem;">
           <img class="card-img-top" src="assets/img/members/{{member.imagebw}}" alt="Card image cap">
         <div class="card-body">
-          <h3> {{ member.name }} </h3>
-          <p class="card-text">{{ member.name }}Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h3 class="card-title"> {{ member.name }} </h3>
+          <p class="card-text">{{ member.instruments }}</p>
        </div>
        </div>  
-        {% else %}
-          <li>This would display if the 'members' collection were empty</li>
+       </div>
         {% endfor %}
+        </div>
+        <h1 class="title">Discography</h1>
         {% for disc in discography %}
           <ul class="list-unstyled">
             <li class="media">
-              <img class="mr-3" src="assets/img/discs/{{disc.image}}" alt="Generic placeholder image">
+              <img class="mr-3 album" src="assets/img/discs/{{disc.image}}" alt="Generic placeholder image">
               <div class="media-body">
-                <h5 class="mt-0 mb-1">{{ disc.title}}</h5>
+                <h5 class="mt-0 mb-1 album-title">{{ disc.title}}</h5>
                 {{disc.year}}
               </div>
             </li>
           </ul>
-        {% else %}
-          <li>This would display if the 'members' collection were empty</li>
         {% endfor %}
     </div>
   </div>
