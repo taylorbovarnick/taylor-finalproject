@@ -21,29 +21,33 @@
       <h1 class="title">Meet The Members</h1>
       <div class="row">
         {% for member in members %}
-        <div class="col-md-3">  
+        <div class="col-sm-6 col-lg-3">  
         <div class="card" style="width: 14rem;">
           <img class="card-img-top" src="assets/img/members/{{member.imagebw}}" alt="Card image cap">
         <div class="card-body">
-          <h3 class="card-title"> {{ member.name }} </h3>
+          <h3 class="card-title"> <a href="{{member.slug}}.html">{{ member.name }}</a> </h3>
           <p class="card-text">{{ member.instruments }}</p>
-       </div>
-       </div>  
+         </div>
+         </div>
        </div>
         {% endfor %}
-        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
         <h1 class="title">Discography</h1>
-        {% for disc in discography %}
           <ul class="list-unstyled">
-            <li class="media">
+             {% for disc in discography %}
+             <li class="media">
               <img class="mr-3 album" src="assets/img/discs/{{disc.image}}" alt="Generic placeholder image">
               <div class="media-body">
                 <h5 class="mt-0 mb-1 album-title">{{ disc.title}}</h5>
                 {{disc.year}}
               </div>
             </li>
+            {% endfor %}
           </ul>
-        {% endfor %}
+        </div>  
+      </div>
     </div>
   </div>
 </div>
